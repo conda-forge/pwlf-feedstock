@@ -9,8 +9,6 @@ package:
 source:
   url: https://pypi.io/packages/source/p/pwlf/pwlf-{{ version }}.tar.gz
   sha256: 4a08a9cb147e4a908fdcfcedeb1e9c20cb9daacff532ee6c8e2d7b42c3241aff
-  patches:
-    - 0001-add-encoding-to-io.open-for-windows-compat.patch  # [win]
 
 build:
 
