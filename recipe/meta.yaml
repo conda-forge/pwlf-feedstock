@@ -1,15 +1,19 @@
 {% set version = "2.0.1" %}
 
 package:
+  # noarch can be enabled as soon as importlib_metada is not necessary anymore
+  # noarch: python
   name: pwlf
   version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/p/pwlf/pwlf-{{ version }}.tar.gz
   sha256: 89d1f92b67b3670d135042da32a6a9752d0948e511b081f162f5fef4164920e7
+  patches:
+    - 0001-add-encoding-to-io.open-for-windows-compat.patch  # [win]
 
 build:
-  noarch: python
+
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,9 +25,9 @@ requirements:
   run:
     - python
     - pydoe >=0.3.8
-    - numpy
+    - numpy >=1.14.0
     - scipy >=1.2.0
-    - setuptools
+    - importlib-metadata  # [py<38]
 
 test:
   imports:
