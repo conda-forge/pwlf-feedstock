@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   # noarch can be enabled as soon as importlib_metada is not necessary anymore
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pwlf/pwlf-{{ version }}.tar.gz
-  sha256: 3a0c127119ba1bbb6b29cb26bc6eac26f3c1304fd7358801966b3a543f92a520
+  sha256: 5fb93343ae379f8713acba42ce9c9aff1926a513674031e7d0b1c2933a6d819a
 
 build:
 
