@@ -1,8 +1,6 @@
 {% set version = "2.5.0" %}
 
 package:
-  # noarch can be enabled as soon as importlib_metada is not necessary anymore
-  # noarch: python
   name: pwlf
   version: {{ version }}
 
@@ -11,23 +9,24 @@ source:
   sha256: e38948e959c6fdad8c0e22cda55fce09c82c0105ff1539d98aa1a136920e8163
 
 build:
-
   number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python
+    - python >={{ python_min }}
     - pydoe >=0.3.8
     - numpy >=1.14.0
     - scipy >=1.2.0
-    - importlib-metadata  # [py<38]
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pwlf
 
