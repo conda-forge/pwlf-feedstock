@@ -1,4 +1,4 @@
-{% set version = "2.5.0" %}
+{% set version = "2.5.1" %}
 
 package:
   name: pwlf
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pwlf/pwlf-{{ version }}.tar.gz
-  sha256: e38948e959c6fdad8c0e22cda55fce09c82c0105ff1539d98aa1a136920e8163
+  sha256: d60cade349682df4c1c8952e0a8761afdb1aca601718c253ae11d6add0799a6d
 
 build:
   number: 0
