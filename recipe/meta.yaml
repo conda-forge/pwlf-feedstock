@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pwlf/pwlf-{{ version }}.tar.gz
-  sha256: ad5779b835ee7057d5675e8e5653ae18f32d084f75ba342f95bd2a100ed89c7b
+  sha256: 6b0f729a08e6429a491cfe73977a580c09734bcf704f819e24e238c598c2defa
 
 build:
   number: 0
