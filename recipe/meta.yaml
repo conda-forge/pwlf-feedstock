@@ -1,12 +1,12 @@
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 
 package:
   name: pwlf
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/pwlf/pwlf-{{ version }}.tar.gz
-  sha256: 6b0f729a08e6429a491cfe73977a580c09734bcf704f819e24e238c598c2defa
+  url: https://files.pythonhosted.org/packages/source/p/pwlf/pwlf-{{ version }}.tar.gz
+  sha256: e72dae1ada907c5c5b7f9d883932e77ecbe612141bbec7785829f4d3481fec15
 
 build:
   number: 0
